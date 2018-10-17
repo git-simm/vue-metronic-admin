@@ -4,10 +4,11 @@
 		<input type="text" v-model="myMsg">
 		<div>{{ myMsg }}</div>
     <p v-for="m in menus" :key="m">{{m.name}}</p>
+		<Footer></Footer>
 	</div>
 </template>
 <script>
-
+import Footer from '@/components/common/Footer'
 export default {
   name: 'tq-footer',
 	props:['msg'],
@@ -37,7 +38,8 @@ export default {
          }
        );
     }
-	}
+	},
+	components:{Footer}
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
