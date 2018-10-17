@@ -4,6 +4,10 @@
 		<input type="text" v-model="myMsg">
 		<div>{{ myMsg }}</div>
     <p v-for="m in menus" :key="m">{{m.name}}</p>
+		<p v-for="m in menus" :key="m">{{m.name}}</p>
+		<p v-for="m in menus" :key="m">{{m.name}}</p>
+		<p v-for="m in menus" :key="m">{{m.name}}</p>
+		<p v-for="m in menus" :key="m">{{m.name}}</p>
 		<Footer></Footer>
 	</div>
 </template>
