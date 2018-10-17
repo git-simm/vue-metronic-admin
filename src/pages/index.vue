@@ -1,6 +1,7 @@
 <template>
 	<div class="container">
-		<input type="text" v-model="myMsg">
+    <Menu></Menu>
+    <input type="text" v-model="myMsg">
 		<div>{{ myMsg }}</div>
     <p v-for="m in menus">{{m.name}}</p>
 		<p v-for="m in menus">{{m.name}}</p>
@@ -34,8 +35,7 @@ export default {
            _this.menus = res.body;
          }
        );
-    }
-	}
+    }}
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
