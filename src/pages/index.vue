@@ -1,6 +1,7 @@
 <template>
 	<div class="container">
 		<Header></Header>
+		<Menu></Menu>
 		<h1 class="footer" @click="show()">test footer test footer</h1>
 		<input type="text" v-model="myMsg">
 		<div>{{ myMsg }}</div>
@@ -15,6 +16,7 @@
 <script>
 import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
+import Menu from '@/components/common/Menu'
 export default {
   name: 'tq-footer',
 	props:['msg'],
@@ -45,7 +47,7 @@ export default {
        );
     }
 	},
-	components:{Footer,Header}
+	components:{Footer,Header,Menu}
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
