@@ -1,1436 +1,951 @@
 <template>
   <div id="app">
-      <!-- BEGIN HEADER -->
+    <Header></Header>
+  <!-- BEGIN CONTAINER -->
 
-	<div class="header navbar navbar-inverse navbar-fixed-top">
+    <div class="page-container">
 
-		<!-- BEGIN TOP NAVIGATION BAR -->
+      <!-- BEGIN SIDEBAR -->
 
-		<div class="navbar-inner">
+      <div class="page-sidebar nav-collapse collapse">
 
-			<div class="container-fluid">
+        <!-- BEGIN SIDEBAR MENU -->
 
-				<!-- BEGIN LOGO -->
+        <ul class="page-sidebar-menu">
 
-				<a class="brand" href="index.html">
+          <li>
 
-				<img src="media/image/logo.png" alt="logo"/>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 
-				</a>
+            <div class="sidebar-toggler hidden-phone"></div>
 
-				<!-- END LOGO -->
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 
-				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+          </li>
 
-				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+          <li>
 
-				<img src="media/image/menu-toggler.png" alt="" />
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
 
-				</a>
+            <form class="sidebar-search">
 
-				<!-- END RESPONSIVE MENU TOGGLER -->
+              <div class="input-box">
 
-				<!-- BEGIN TOP NAVIGATION MENU -->
+                <a href="javascript:;" class="remove"></a>
 
-				<ul class="nav pull-right">
+                <input type="text" placeholder="Search..." />
 
-					<!-- BEGIN NOTIFICATION DROPDOWN -->
+                <input type="button" class="submit" value=" " />
 
-					<li class="dropdown" id="header_notification_bar">
+              </div>
 
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            </form>
 
-						<i class="icon-warning-sign"></i>
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
 
-						<span class="badge">6</span>
+          </li>
 
-						</a>
+          <li class="start active ">
 
-						<ul class="dropdown-menu extended notification">
+            <a href="index.html">
 
-							<li>
+            <i class="icon-home"></i>
 
-								<p>You have 14 new notifications</p>
+            <span class="title">Dashboard</span>
 
-							</li>
+            <span class="selected"></span>
 
-							<li>
+            </a>
 
-								<a href="#">
+          </li>
 
-								<span class="label label-success"><i class="icon-plus"></i></span>
+          <li class="">
 
-								New user registered.
+            <a href="javascript:;">
 
-								<span class="time">Just now</span>
+            <i class="icon-cogs"></i>
 
-								</a>
+            <span class="title">Layouts</span>
 
-							</li>
+            <span class="arrow "></span>
 
-							<li>
+            </a>
 
-								<a href="#">
+            <ul class="sub-menu">
 
-								<span class="label label-important"><i class="icon-bolt"></i></span>
+              <li >
 
-								Server #12 overloaded.
+                <a href="layout_horizontal_sidebar_menu.html">
 
-								<span class="time">15 mins</span>
+                Horzontal & Sidebar Menu</a>
 
-								</a>
+              </li>
 
-							</li>
+              <li >
 
-							<li>
+                <a href="layout_horizontal_menu1.html">
 
-								<a href="#">
+                Horzontal Menu 1</a>
 
-								<span class="label label-warning"><i class="icon-bell"></i></span>
+              </li>
 
-								Server #2 not respoding.
+              <li >
 
-								<span class="time">22 mins</span>
+                <a href="layout_horizontal_menu2.html">
 
-								</a>
+                Horzontal Menu 2</a>
 
-							</li>
+              </li>
 
-							<li>
+              <li >
 
-								<a href="#">
+                <a href="layout_promo.html">
 
-								<span class="label label-info"><i class="icon-bullhorn"></i></span>
+                Promo Page</a>
 
-								Application error.
+              </li>
 
-								<span class="time">40 mins</span>
+              <li >
 
-								</a>
+                <a href="layout_email.html">
 
-							</li>
+                Email Templates</a>
 
-							<li>
+              </li>
 
-								<a href="#">
+              <li >
 
-								<span class="label label-important"><i class="icon-bolt"></i></span>
+                <a href="layout_ajax.html">
 
-								Database overloaded 68%.
+                Content Loading via Ajax</a>
 
-								<span class="time">2 hrs</span>
+              </li>
 
-								</a>
+              <li >
 
-							</li>
+                <a href="layout_sidebar_closed.html">
 
-							<li>
+                Sidebar Closed Page</a>
 
-								<a href="#">
+              </li>
 
-								<span class="label label-important"><i class="icon-bolt"></i></span>
+              <li >
 
-								2 user IP blocked.
+                <a href="layout_blank_page.html">
 
-								<span class="time">5 hrs</span>
+                Blank Page</a>
 
-								</a>
+              </li>
 
-							</li>
+              <li >
 
-							<li class="external">
+                <a href="layout_boxed_page.html">
 
-								<a href="#">See all notifications <i class="m-icon-swapright"></i></a>
+                Boxed Page</a>
 
-							</li>
+              </li>
 
-						</ul>
+              <li >
 
-					</li>
+                <a href="layout_boxed_not_responsive.html">
 
-					<!-- END NOTIFICATION DROPDOWN -->
+                Non-Responsive Boxed Layout</a>
 
-					<!-- BEGIN INBOX DROPDOWN -->
+              </li>
 
-					<li class="dropdown" id="header_inbox_bar">
+            </ul>
 
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          </li>
 
-						<i class="icon-envelope"></i>
+          <li class="">
 
-						<span class="badge">5</span>
+            <a href="javascript:;">
 
-						</a>
+            <i class="icon-bookmark-empty"></i>
 
-						<ul class="dropdown-menu extended inbox">
+            <span class="title">UI Features</span>
 
-							<li>
+            <span class="arrow "></span>
 
-								<p>You have 12 new messages</p>
+            </a>
 
-							</li>
+            <ul class="sub-menu">
 
-							<li>
+              <li >
 
-								<a href="inbox.html?a=view">
+                <a href="ui_general.html">
 
-								<span class="photo"><img src="media/image/avatar2.jpg" alt="" /></span>
+                General</a>
 
-								<span class="subject">
+              </li>
 
-								<span class="from">Lisa Wong</span>
+              <li >
 
-								<span class="time">Just Now</span>
+                <a href="ui_buttons.html">
 
-								</span>
+                Buttons</a>
 
-								<span class="message">
+              </li>
 
-								Vivamus sed auctor nibh congue nibh. auctor nibh
+              <li >
 
-								auctor nibh...
+                <a href="ui_modals.html">
 
-								</span>
+                Enhanced Modals</a>
 
-								</a>
+              </li>
 
-							</li>
+              <li >
 
-							<li>
+                <a href="ui_tabs_accordions.html">
 
-								<a href="inbox.html?a=view">
+                Tabs & Accordions</a>
 
-								<span class="photo"><img alt="" /></span>
+              </li>
 
-								<span class="subject">
+              <li >
 
-								<span class="from">Richard Doe</span>
+                <a href="ui_jqueryui.html">
 
-								<span class="time">16 mins</span>
+                jQuery UI Components</a>
 
-								</span>
+              </li>
 
-								<span class="message">
+              <li >
 
-								Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh
+                <a href="ui_sliders.html">
 
-								auctor nibh...
+                Sliders</a>
 
-								</span>
+              </li>
 
-								</a>
+              <li >
 
-							</li>
+                <a href="ui_tiles.html">
 
-							<li>
+                Tiles</a>
 
-								<a href="inbox.html?a=view">
+              </li>
 
-								<span class="photo"><img  alt="" /></span>
+              <li >
 
-								<span class="subject"></span>
+                <a href="ui_typography.html">
 
-								<span class="from">Bob Nilson</span>
+                Typography</a>
 
-								<span class="time">2 hrs</span>
+              </li>
 
-								<span class="message">
+              <li >
 
-								Vivamus sed nibh auctor nibh congue nibh. auctor nibh
+                <a href="ui_tree.html">
 
-								auctor nibh...
+                Tree View</a>
 
-								</span>
+              </li>
 
-								</a>
+              <li >
 
-							</li>
+                <a href="ui_nestable.html">
 
-							<li class="external">
+                Nestable List</a>
 
-								<a href="inbox.html">See all messages <i class="m-icon-swapright"></i></a>
+              </li>
 
-							</li>
+            </ul>
 
-						</ul>
+          </li>
 
-					</li>
+          <li class="">
 
-					<!-- END INBOX DROPDOWN -->
+            <a href="javascript:;">
 
-					<!-- BEGIN TODO DROPDOWN -->
+            <i class="icon-table"></i>
 
-					<li class="dropdown" id="header_task_bar">
+            <span class="title">Form Stuff</span>
 
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="arrow "></span>
 
-						<i class="icon-tasks"></i>
+            </a>
 
-						<span class="badge">5</span>
+            <ul class="sub-menu">
 
-						</a>
+              <li >
 
-						<ul class="dropdown-menu extended tasks">
+                <a href="form_layout.html">
 
-							<li>
+                Form Layouts</a>
 
-								<p>You have 12 pending tasks</p>
+              </li>
 
-							</li>
+              <li >
 
-							<li>
+                <a href="form_samples.html">
 
-								<a href="#">
+                Advance Form Samples</a>
 
-								<span class="task">
+              </li>
 
-								<span class="desc">New release v1.2</span>
+              <li >
 
-								<span class="percent">30%</span>
+                <a href="form_component.html">
 
-								</span>
+                Form Components</a>
 
-								<span class="progress progress-success ">
+              </li>
 
-								<span style="width: 30%;" class="bar"></span>
+              <li >
 
-								</span>
+                <a href="form_wizard.html">
 
-								</a>
+                Form Wizard</a>
 
-							</li>
+              </li>
 
-							<li>
+              <li >
 
-								<a href="#">
+                <a href="form_validation.html">
 
-								<span class="task">
+                Form Validation</a>
 
-								<span class="desc">Application deployment</span>
+              </li>
 
-								<span class="percent">65%</span>
+              <li >
 
-								</span>
+                <a href="form_fileupload.html">
 
-								<span class="progress progress-danger progress-striped active">
+                Multiple File Upload</a>
 
-								<span style="width: 65%;" class="bar"></span>
+              </li>
 
-								</span>
+              <li >
 
-								</a>
+                <a href="form_dropzone.html">
 
-							</li>
+                Dropzone File Upload</a>
 
-							<li>
+              </li>
 
-								<a href="#">
+            </ul>
 
-								<span class="task">
+          </li>
 
-								<span class="desc">Mobile app release</span>
+          <li class="">
 
-								<span class="percent">98%</span>
+            <a href="javascript:;">
 
-								</span>
+            <i class="icon-briefcase"></i>
 
-								<span class="progress progress-success">
+            <span class="title">Pages</span>
 
-								<span style="width: 98%;" class="bar"></span>
+            <span class="arrow "></span>
 
-								</span>
+            </a>
 
-								</a>
+            <ul class="sub-menu">
 
-							</li>
+              <li >
 
-							<li>
+                <a href="page_timeline.html">
 
-								<a href="#">
+                <i class="icon-time"></i>
 
-								<span class="task">
+                Timeline</a>
 
-								<span class="desc">Database migration</span>
+              </li>
 
-								<span class="percent">10%</span>
+              <li >
 
-								</span>
+                <a href="page_coming_soon.html">
 
-								<span class="progress progress-warning progress-striped">
+                <i class="icon-cogs"></i>
 
-								<span style="width: 10%;" class="bar"></span>
+                Coming Soon</a>
 
-								</span>
+              </li>
 
-								</a>
+              <li >
 
-							</li>
+                <a href="page_blog.html">
 
-							<li>
+                <i class="icon-comments"></i>
 
-								<a href="#">
+                Blog</a>
 
-								<span class="task">
+              </li>
 
-								<span class="desc">Web server upgrade</span>
+              <li >
 
-								<span class="percent">58%</span>
+                <a href="page_blog_item.html">
 
-								</span>
+                <i class="icon-font"></i>
 
-								<span class="progress progress-info">
+                Blog Post</a>
 
-								<span style="width: 58%;" class="bar"></span>
+              </li>
 
-								</span>
+              <li >
 
-								</a>
+                <a href="page_news.html">
 
-							</li>
+                <i class="icon-coffee"></i>
 
-							<li>
+                News</a>
 
-								<a href="#">
+              </li>
 
-								<span class="task">
+              <li >
 
-								<span class="desc">Mobile development</span>
+                <a href="page_news_item.html">
 
-								<span class="percent">85%</span>
+                <i class="icon-bell"></i>
 
-								</span>
+                News View</a>
 
-								<span class="progress progress-success">
+              </li>
 
-								<span style="width: 85%;" class="bar"></span>
+              <li >
 
-								</span>
+                <a href="page_about.html">
 
-								</a>
+                <i class="icon-group"></i>
 
-							</li>
+                About Us</a>
 
-							<li class="external">
+              </li>
 
-								<a href="#">See all tasks <i class="m-icon-swapright"></i></a>
+              <li >
 
-							</li>
+                <a href="page_contact.html">
 
-						</ul>
+                <i class="icon-envelope-alt"></i>
 
-					</li>
+                Contact Us</a>
 
-					<!-- END TODO DROPDOWN -->
+              </li>
 
-					<!-- BEGIN USER LOGIN DROPDOWN -->
+              <li >
 
-					<li class="dropdown user">
+                <a href="page_calendar.html">
 
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-calendar"></i>
 
-						<img alt="" src="media/image/avatar1_small.jpg" />
+                Calendar</a>
 
-						<span class="username">Bob Nilson</span>
+              </li>
 
-						<i class="icon-angle-down"></i>
+            </ul>
 
-						</a>
+          </li>
 
-						<ul class="dropdown-menu">
+          <li class="">
 
-							<li><a href="extra_profile.html"><i class="icon-user"></i> My Profile</a></li>
+            <a href="javascript:;">
 
-							<li><a href="page_calendar.html"><i class="icon-calendar"></i> My Calendar</a></li>
+            <i class="icon-gift"></i>
 
-							<li><a href="inbox.html"><i class="icon-envelope"></i> My Inbox(3)</a></li>
+            <span class="title">Extra</span>
 
-							<li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>
+            <span class="arrow "></span>
 
-							<li class="divider"></li>
+            </a>
 
-							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
+            <ul class="sub-menu">
 
-							<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+              <li >
 
-						</ul>
+                <a href="extra_profile.html">
 
-					</li>
+                User Profile</a>
 
-					<!-- END USER LOGIN DROPDOWN -->
+              </li>
 
-				</ul>
+              <li >
 
-				<!-- END TOP NAVIGATION MENU -->
+                <a href="extra_lock.html">
 
-			</div>
+                Lock Screen</a>
 
-		</div>
+              </li>
 
-		<!-- END TOP NAVIGATION BAR -->
+              <li >
 
-	</div>
+                <a href="extra_faq.html">
 
-<!-- BEGIN CONTAINER -->
+                FAQ</a>
 
-	<div class="page-container">
+              </li>
 
-		<!-- BEGIN SIDEBAR -->
+              <li >
 
-		<div class="page-sidebar nav-collapse collapse">
+                <a href="inbox.html">
 
-			<!-- BEGIN SIDEBAR MENU -->
+                Inbox</a>
 
-			<ul class="page-sidebar-menu">
+              </li>
 
-				<li>
+              <li >
 
-					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <a href="extra_search.html">
 
-					<div class="sidebar-toggler hidden-phone"></div>
+                Search Results</a>
 
-					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+              </li>
 
-				</li>
+              <li >
 
-				<li>
+                <a href="extra_invoice.html">
 
-					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                Invoice</a>
 
-					<form class="sidebar-search">
+              </li>
 
-						<div class="input-box">
+              <li >
 
-							<a href="javascript:;" class="remove"></a>
+                <a href="extra_pricing_table.html">
 
-							<input type="text" placeholder="Search..." />
+                Pricing Tables</a>
 
-							<input type="button" class="submit" value=" " />
+              </li>
 
-						</div>
+              <li >
 
-					</form>
+                <a href="extra_image_manager.html">
 
-					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+                Image Manager</a>
 
-				</li>
+              </li>
 
-				<li class="start active ">
+              <li >
 
-					<a href="index.html">
+                <a href="extra_404_option1.html">
 
-					<i class="icon-home"></i>
+                404 Page Option 1</a>
 
-					<span class="title">Dashboard</span>
+              </li>
 
-					<span class="selected"></span>
+              <li >
 
-					</a>
+                <a href="extra_404_option2.html">
 
-				</li>
+                404 Page Option 2</a>
 
-				<li class="">
+              </li>
 
-					<a href="javascript:;">
+              <li >
 
-					<i class="icon-cogs"></i>
+                <a href="extra_404_option3.html">
 
-					<span class="title">Layouts</span>
+                404 Page Option 3</a>
 
-					<span class="arrow "></span>
+              </li>
 
-					</a>
+              <li >
 
-					<ul class="sub-menu">
+                <a href="extra_500_option1.html">
 
-						<li >
+                500 Page Option 1</a>
 
-							<a href="layout_horizontal_sidebar_menu.html">
+              </li>
 
-							Horzontal & Sidebar Menu</a>
+              <li >
 
-						</li>
+                <a href="extra_500_option2.html">
 
-						<li >
+                500 Page Option 2</a>
 
-							<a href="layout_horizontal_menu1.html">
+              </li>
 
-							Horzontal Menu 1</a>
+            </ul>
 
-						</li>
+          </li>
 
-						<li >
+          <li>
 
-							<a href="layout_horizontal_menu2.html">
+            <a class="active" href="javascript:;">
 
-							Horzontal Menu 2</a>
+            <i class="icon-sitemap"></i>
 
-						</li>
+            <span class="title">3 Level Menu</span>
 
-						<li >
+            <span class="arrow "></span>
 
-							<a href="layout_promo.html">
+            </a>
 
-							Promo Page</a>
+            <ul class="sub-menu">
 
-						</li>
+              <li>
 
-						<li >
+                <a href="javascript:;">
 
-							<a href="layout_email.html">
+                Item 1
 
-							Email Templates</a>
+                <span class="arrow"></span>
 
-						</li>
+                </a>
 
-						<li >
+                <ul class="sub-menu">
 
-							<a href="layout_ajax.html">
+                  <li><a href="#">Sample Link 1</a></li>
 
-							Content Loading via Ajax</a>
+                  <li><a href="#">Sample Link 2</a></li>
 
-						</li>
+                  <li><a href="#">Sample Link 3</a></li>
 
-						<li >
+                </ul>
 
-							<a href="layout_sidebar_closed.html">
+              </li>
 
-							Sidebar Closed Page</a>
+              <li>
 
-						</li>
+                <a href="javascript:;">
 
-						<li >
+                Item 1
 
-							<a href="layout_blank_page.html">
+                <span class="arrow"></span>
 
-							Blank Page</a>
+                </a>
 
-						</li>
+                <ul class="sub-menu">
 
-						<li >
+                  <li><a href="#">Sample Link 1</a></li>
 
-							<a href="layout_boxed_page.html">
+                  <li><a href="#">Sample Link 1</a></li>
 
-							Boxed Page</a>
+                  <li><a href="#">Sample Link 1</a></li>
 
-						</li>
+                </ul>
 
-						<li >
+              </li>
 
-							<a href="layout_boxed_not_responsive.html">
+              <li>
 
-							Non-Responsive Boxed Layout</a>
+                <a href="#">
 
-						</li>
+                Item 3
 
-					</ul>
+                </a>
 
-				</li>
+              </li>
 
-				<li class="">
+            </ul>
 
-					<a href="javascript:;">
+          </li>
 
-					<i class="icon-bookmark-empty"></i>
+          <li>
 
-					<span class="title">UI Features</span>
+            <a href="javascript:;">
 
-					<span class="arrow "></span>
+            <i class="icon-folder-open"></i>
 
-					</a>
+            <span class="title">4 Level Menu</span>
 
-					<ul class="sub-menu">
+            <span class="arrow "></span>
 
-						<li >
+            </a>
 
-							<a href="ui_general.html">
+            <ul class="sub-menu">
 
-							General</a>
+              <li>
 
-						</li>
+                <a href="javascript:;">
 
-						<li >
+                <i class="icon-cogs"></i>
 
-							<a href="ui_buttons.html">
+                Item 1
 
-							Buttons</a>
+                <span class="arrow"></span>
 
-						</li>
+                </a>
 
-						<li >
+                <ul class="sub-menu">
 
-							<a href="ui_modals.html">
+                  <li>
 
-							Enhanced Modals</a>
+                    <a href="javascript:;">
 
-						</li>
+                    <i class="icon-user"></i>
 
-						<li >
+                    Sample Link 1
 
-							<a href="ui_tabs_accordions.html">
+                    <span class="arrow"></span>
 
-							Tabs & Accordions</a>
+                    </a>
 
-						</li>
+                    <ul class="sub-menu">
 
-						<li >
+                      <li><a href="#"><i class="icon-remove"></i> Sample Link 1</a></li>
 
-							<a href="ui_jqueryui.html">
+                      <li><a href="#"><i class="icon-pencil"></i> Sample Link 1</a></li>
 
-							jQuery UI Components</a>
+                      <li><a href="#"><i class="icon-edit"></i> Sample Link 1</a></li>
 
-						</li>
+                    </ul>
 
-						<li >
+                  </li>
 
-							<a href="ui_sliders.html">
+                  <li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
 
-							Sliders</a>
+                  <li><a href="#"><i class="icon-external-link"></i>  Sample Link 2</a></li>
 
-						</li>
+                  <li><a href="#"><i class="icon-bell"></i>  Sample Link 3</a></li>
 
-						<li >
+                </ul>
 
-							<a href="ui_tiles.html">
+              </li>
 
-							Tiles</a>
+              <li>
 
-						</li>
+                <a href="javascript:;">
 
-						<li >
+                <i class="icon-globe"></i>
 
-							<a href="ui_typography.html">
+                Item 2
 
-							Typography</a>
+                <span class="arrow"></span>
 
-						</li>
+                </a>
 
-						<li >
+                <ul class="sub-menu">
 
-							<a href="ui_tree.html">
+                  <li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
 
-							Tree View</a>
+                  <li><a href="#"><i class="icon-external-link"></i>  Sample Link 1</a></li>
 
-						</li>
+                  <li><a href="#"><i class="icon-bell"></i>  Sample Link 1</a></li>
 
-						<li >
+                </ul>
 
-							<a href="ui_nestable.html">
+              </li>
 
-							Nestable List</a>
+              <li>
 
-						</li>
+                <a href="#">
 
-					</ul>
+                <i class="icon-folder-open"></i>
 
-				</li>
+                Item 3
 
-				<li class="">
+                </a>
 
-					<a href="javascript:;">
+              </li>
 
-					<i class="icon-table"></i>
+            </ul>
 
-					<span class="title">Form Stuff</span>
+          </li>
 
-					<span class="arrow "></span>
+          <li class="">
 
-					</a>
+            <a href="javascript:;">
 
-					<ul class="sub-menu">
+            <i class="icon-user"></i>
 
-						<li >
+            <span class="title">Login Options</span>
 
-							<a href="form_layout.html">
+            <span class="arrow "></span>
 
-							Form Layouts</a>
+            </a>
 
-						</li>
+            <ul class="sub-menu">
 
-						<li >
+              <li >
 
-							<a href="form_samples.html">
+                <a href="login.html">
 
-							Advance Form Samples</a>
+                Login Form 1</a>
 
-						</li>
+              </li>
 
-						<li >
+              <li >
 
-							<a href="form_component.html">
+                <a href="login_soft.html">
 
-							Form Components</a>
+                Login Form 2</a>
 
-						</li>
+              </li>
 
-						<li >
+            </ul>
 
-							<a href="form_wizard.html">
+          </li>
 
-							Form Wizard</a>
+          <li class="">
 
-						</li>
+            <a href="javascript:;">
 
-						<li >
+            <i class="icon-th"></i>
 
-							<a href="form_validation.html">
+            <span class="title">Data Tables</span>
 
-							Form Validation</a>
+            <span class="arrow "></span>
 
-						</li>
+            </a>
 
-						<li >
+            <ul class="sub-menu">
 
-							<a href="form_fileupload.html">
+              <li >
 
-							Multiple File Upload</a>
+                <a href="table_basic.html">
 
-						</li>
+                Basic Tables</a>
 
-						<li >
+              </li>
 
-							<a href="form_dropzone.html">
+              <li >
 
-							Dropzone File Upload</a>
+                <a href="table_responsive.html">
 
-						</li>
+                Responsive Tables</a>
 
-					</ul>
+              </li>
 
-				</li>
+              <li >
 
-				<li class="">
+                <a href="table_managed.html">
 
-					<a href="javascript:;">
+                Managed Tables</a>
 
-					<i class="icon-briefcase"></i>
+              </li>
 
-					<span class="title">Pages</span>
+              <li >
 
-					<span class="arrow "></span>
+                <a href="table_editable.html">
 
-					</a>
+                Editable Tables</a>
 
-					<ul class="sub-menu">
+              </li>
 
-						<li >
+              <li >
 
-							<a href="page_timeline.html">
+                <a href="table_advanced.html">
 
-							<i class="icon-time"></i>
+                Advanced Tables</a>
 
-							Timeline</a>
+              </li>
 
-						</li>
+            </ul>
 
-						<li >
+          </li>
 
-							<a href="page_coming_soon.html">
+          <li class="">
 
-							<i class="icon-cogs"></i>
+            <a href="javascript:;">
 
-							Coming Soon</a>
+            <i class="icon-file-text"></i>
 
-						</li>
+            <span class="title">Portlets</span>
 
-						<li >
+            <span class="arrow "></span>
 
-							<a href="page_blog.html">
+            </a>
 
-							<i class="icon-comments"></i>
+            <ul class="sub-menu">
 
-							Blog</a>
+              <li >
 
-						</li>
+                <a href="portlet_general.html">
 
-						<li >
+                General Portlets</a>
 
-							<a href="page_blog_item.html">
+              </li>
 
-							<i class="icon-font"></i>
+              <li >
 
-							Blog Post</a>
+                <a href="portlet_draggable.html">
 
-						</li>
+                Draggable Portlets</a>
 
-						<li >
+              </li>
 
-							<a href="page_news.html">
+            </ul>
 
-							<i class="icon-coffee"></i>
+          </li>
 
-							News</a>
+          <li class="">
 
-						</li>
+            <a href="javascript:;">
 
-						<li >
+            <i class="icon-map-marker"></i>
 
-							<a href="page_news_item.html">
+            <span class="title">Maps</span>
 
-							<i class="icon-bell"></i>
+            <span class="arrow "></span>
 
-							News View</a>
+            </a>
 
-						</li>
+            <ul class="sub-menu">
 
-						<li >
+              <li >
 
-							<a href="page_about.html">
+                <a href="maps_google.html">
 
-							<i class="icon-group"></i>
+                Google Maps</a>
 
-							About Us</a>
+              </li>
 
-						</li>
+              <li >
 
-						<li >
+                <a href="maps_vector.html">
 
-							<a href="page_contact.html">
+                Vector Maps</a>
 
-							<i class="icon-envelope-alt"></i>
+              </li>
 
-							Contact Us</a>
+            </ul>
 
-						</li>
+          </li>
 
-						<li >
+          <li class="last ">
 
-							<a href="page_calendar.html">
+            <a href="charts.html">
 
-							<i class="icon-calendar"></i>
+            <i class="icon-bar-chart"></i>
 
-							Calendar</a>
+            <span class="title">Visual Charts</span>
 
-						</li>
+            </a>
 
-					</ul>
+          </li>
 
-				</li>
+        </ul>
 
-				<li class="">
+        <!-- END SIDEBAR MENU -->
 
-					<a href="javascript:;">
+      </div>
 
-					<i class="icon-gift"></i>
+      <!-- END SIDEBAR -->
 
-					<span class="title">Extra</span>
+      <!-- BEGIN PAGE -->
 
-					<span class="arrow "></span>
+      <div class="page-content">
+        <router-view/>
+      </div>
+      <!-- END PAGE -->
+    </div>
 
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="extra_profile.html">
-
-							User Profile</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_lock.html">
-
-							Lock Screen</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_faq.html">
-
-							FAQ</a>
-
-						</li>
-
-						<li >
-
-							<a href="inbox.html">
-
-							Inbox</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_search.html">
-
-							Search Results</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_invoice.html">
-
-							Invoice</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_pricing_table.html">
-
-							Pricing Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_image_manager.html">
-
-							Image Manager</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_404_option1.html">
-
-							404 Page Option 1</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_404_option2.html">
-
-							404 Page Option 2</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_404_option3.html">
-
-							404 Page Option 3</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_500_option1.html">
-
-							500 Page Option 1</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_500_option2.html">
-
-							500 Page Option 2</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li>
-
-					<a class="active" href="javascript:;">
-
-					<i class="icon-sitemap"></i>
-
-					<span class="title">3 Level Menu</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li>
-
-							<a href="javascript:;">
-
-							Item 1
-
-							<span class="arrow"></span>
-
-							</a>
-
-							<ul class="sub-menu">
-
-								<li><a href="#">Sample Link 1</a></li>
-
-								<li><a href="#">Sample Link 2</a></li>
-
-								<li><a href="#">Sample Link 3</a></li>
-
-							</ul>
-
-						</li>
-
-						<li>
-
-							<a href="javascript:;">
-
-							Item 1
-
-							<span class="arrow"></span>
-
-							</a>
-
-							<ul class="sub-menu">
-
-								<li><a href="#">Sample Link 1</a></li>
-
-								<li><a href="#">Sample Link 1</a></li>
-
-								<li><a href="#">Sample Link 1</a></li>
-
-							</ul>
-
-						</li>
-
-						<li>
-
-							<a href="#">
-
-							Item 3
-
-							</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li>
-
-					<a href="javascript:;">
-
-					<i class="icon-folder-open"></i>
-
-					<span class="title">4 Level Menu</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li>
-
-							<a href="javascript:;">
-
-							<i class="icon-cogs"></i>
-
-							Item 1
-
-							<span class="arrow"></span>
-
-							</a>
-
-							<ul class="sub-menu">
-
-								<li>
-
-									<a href="javascript:;">
-
-									<i class="icon-user"></i>
-
-									Sample Link 1
-
-									<span class="arrow"></span>
-
-									</a>
-
-									<ul class="sub-menu">
-
-										<li><a href="#"><i class="icon-remove"></i> Sample Link 1</a></li>
-
-										<li><a href="#"><i class="icon-pencil"></i> Sample Link 1</a></li>
-
-										<li><a href="#"><i class="icon-edit"></i> Sample Link 1</a></li>
-
-									</ul>
-
-								</li>
-
-								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
-
-								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 2</a></li>
-
-								<li><a href="#"><i class="icon-bell"></i>  Sample Link 3</a></li>
-
-							</ul>
-
-						</li>
-
-						<li>
-
-							<a href="javascript:;">
-
-							<i class="icon-globe"></i>
-
-							Item 2
-
-							<span class="arrow"></span>
-
-							</a>
-
-							<ul class="sub-menu">
-
-								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
-
-								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 1</a></li>
-
-								<li><a href="#"><i class="icon-bell"></i>  Sample Link 1</a></li>
-
-							</ul>
-
-						</li>
-
-						<li>
-
-							<a href="#">
-
-							<i class="icon-folder-open"></i>
-
-							Item 3
-
-							</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li class="">
-
-					<a href="javascript:;">
-
-					<i class="icon-user"></i>
-
-					<span class="title">Login Options</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="login.html">
-
-							Login Form 1</a>
-
-						</li>
-
-						<li >
-
-							<a href="login_soft.html">
-
-							Login Form 2</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li class="">
-
-					<a href="javascript:;">
-
-					<i class="icon-th"></i>
-
-					<span class="title">Data Tables</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="table_basic.html">
-
-							Basic Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_responsive.html">
-
-							Responsive Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_managed.html">
-
-							Managed Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_editable.html">
-
-							Editable Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_advanced.html">
-
-							Advanced Tables</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li class="">
-
-					<a href="javascript:;">
-
-					<i class="icon-file-text"></i>
-
-					<span class="title">Portlets</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="portlet_general.html">
-
-							General Portlets</a>
-
-						</li>
-
-						<li >
-
-							<a href="portlet_draggable.html">
-
-							Draggable Portlets</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li class="">
-
-					<a href="javascript:;">
-
-					<i class="icon-map-marker"></i>
-
-					<span class="title">Maps</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="maps_google.html">
-
-							Google Maps</a>
-
-						</li>
-
-						<li >
-
-							<a href="maps_vector.html">
-
-							Vector Maps</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li class="last ">
-
-					<a href="charts.html">
-
-					<i class="icon-bar-chart"></i>
-
-					<span class="title">Visual Charts</span>
-
-					</a>
-
-				</li>
-
-			</ul>
-
-			<!-- END SIDEBAR MENU -->
-
-		</div>
-
-		<!-- END SIDEBAR -->
-
-		<!-- BEGIN PAGE -->
-
-		<div class="page-content">
-      <router-view/>
-		</div>
-		<!-- END PAGE -->
-	</div>
-
-	<!-- END CONTAINER -->
-  	<!-- BEGIN FOOTER -->
-
-	<div class="footer">
-
-		<div class="footer-inner">
-
-			2013 &copy; Metronic by keenthemes.Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
-
-		</div>
-
-		<div class="footer-tools">
-
-			<span class="go-top">
-
-			<i class="icon-angle-up"></i>
-
-			</span>
-
-		</div>
-	</div>
-	<!-- END FOOTER -->
+    <!-- END CONTAINER -->
+    <Footer></Footer>
 	</div>
 </template>
 
 <script>
-import myApp from 'metronic/js/app.js'
-import myIndex from 'metronic/js/index.js'
+
+import myApp from "metronic/js/app.js";
+import myIndex from "metronic/js/index.js";
+
+import Footer from '@/components/common/Footer'
+import Header from '@/components/common/Header'
 
 export default {
-  name: 'App'
-}
+  name: "App",
+  components:{ Footer , Header }
+};
 
 myApp.init(); // initlayout and core plugins
-myIndex.init();
-
+//myIndex.init();
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

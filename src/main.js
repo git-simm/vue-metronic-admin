@@ -37,9 +37,7 @@ import 'metronic/js/jquery.gritter.js'
 import 'metronic/js/fullcalendar.min.js'
 // ------ page plugin 引入完成--------------------------
 
-
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

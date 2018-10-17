@@ -1,15 +1,15 @@
 <template>
-	<div class="row container">
-    <div class="col-md-3">
-      <h1 class="footer" @click="show()">test footer test footer</h1>
-      <input type="text" v-model="myMsg">
-      <div>{{ myMsg }}</div>
-      <p v-for="m in menus">{{m.name}}</p>
-    </div>
+	<div class="container">
+		<input type="text" v-model="myMsg">
+		<div>{{ myMsg }}</div>
+    <p v-for="m in menus">{{m.name}}</p>
+		<p v-for="m in menus">{{m.name}}</p>
+		<p v-for="m in menus">{{m.name}}</p>
+		<p v-for="m in menus">{{m.name}}</p>
+		<p v-for="m in menus">{{m.name}}</p>
 	</div>
 </template>
 <script>
-
 export default {
   name: 'tq-footer',
 	props:['msg'],
@@ -27,10 +27,6 @@ export default {
   },
 	//方法
 	methods: {
-		show: function() {
-      var i=0;
-			alert(this.name);
-    },
     getMenus:function(){
        var _this = this;
        this.$http.get('static/data/menu.json',null).then(
@@ -56,7 +52,7 @@ h1, h2 {
 }
 .footer{
 	height: 50px;
-	background-color: lawngreen;
+	/*background-color: lawngreen; */
 }
 input{
 	width:400px;

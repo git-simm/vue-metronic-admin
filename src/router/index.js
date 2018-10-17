@@ -5,7 +5,11 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 Vue.use(vueResource);
+
+//Vue.component('Footer',footer);
+//Vue.component('Header',header);
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/hello',
