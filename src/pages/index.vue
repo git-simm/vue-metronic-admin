@@ -1,9 +1,11 @@
 <template>
-	<div class="container">
-		<h1 class="footer" @click="show()">test footer test footer</h1>
-		<input type="text" v-model="myMsg">
-		<div>{{ myMsg }}</div>
-    <p v-for="m in menus" :key="m">{{m.name}}</p>
+	<div class="row container">
+    <div class="col-md-3">
+      <h1 class="footer" @click="show()">test footer test footer</h1>
+      <input type="text" v-model="myMsg">
+      <div>{{ myMsg }}</div>
+      <p v-for="m in menus">{{m.name}}</p>
+    </div>
 	</div>
 </template>
 <script>
@@ -26,7 +28,7 @@ export default {
 	//方法
 	methods: {
 		show: function() {
-			var i=0;
+      var i=0;
 			alert(this.name);
     },
     getMenus:function(){
