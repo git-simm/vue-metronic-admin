@@ -1,7 +1,8 @@
+
 <template>
     <div class="page-sidebar nav-collapse collapse">
-        <ul>
-            <li class="" v-for="m in menus">
+        <ul class="page-sidebar-menu">
+            <li class="" v-for="m in menus" :key="m.id">
 
                 <a href="javascript:;">
 
@@ -13,15 +14,25 @@
 
                 </a>
 
-                <ul class="sub-menu">
-                    <li v-for="m2 in m.children">
+                <ul v-if="m.id !=null" class="sub-menu">
+                    <li v-for="m2 in m.children" :key="m2.id">
+
+                            <a>
+                                <router-link :to="m2.url">
+                                {{m2.name}}
+                                </router-link>
+                                </a>
+                    </li>
+                </ul>
+
+                <ul v-else class="page-sidebar-menu">
+                    <li v-for="m2 in m.children" v-bind:todo="m2" v-bind:key="m2.id">
 
                         <a href="layout_horizontal_sidebar_menu.html">
 
                             {{m2.name}}</a>
 
                     </li>
-
                 </ul>
 
             </li>
@@ -37,7 +48,7 @@ export default {
       menus: []
     };
   },
-  mounted:function(){
+  mounted: function() {
     //编译完成后执行
     this.getMenu();
   },
