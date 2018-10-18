@@ -1,5 +1,6 @@
 <template>
 	<div class="container">
+<<<<<<< HEAD
     <Menu></Menu>
     <input type="text" v-model="myMsg">
 		<div>{{ myMsg }}</div>
@@ -8,12 +9,23 @@
 		<p v-for="m in menus" :key="m.id">{{m.name}}</p>
 		<p v-for="m in menus" :key="m.id">{{m.name}}</p>
 		<p v-for="m in menus" :key="m.id">{{m.name}}</p>
+=======
+    <Content comment="这是楼主">
+       <Content comment="这是2楼">
+         <Content comment="这是3楼">
+           <Content comment="这是4楼"/>
+         </Content>
+       </Content>
+    </Content>
+>>>>>>> 735369b9b03f1e62ec60c79544175372fa94b241
 	</div>
 </template>
 <script>
+import Content from '@/components/common/Content'
 export default {
   name: 'tq-footer',
-	props:['msg'],
+  props:['msg'],
+  components:{Content},
 	//数据
 	data: function() {
 		return {

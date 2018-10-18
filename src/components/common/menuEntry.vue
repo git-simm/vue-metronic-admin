@@ -3,17 +3,11 @@
     <div class="page-sidebar nav-collapse collapse">
         <ul class="page-sidebar-menu">
             <li class="" v-for="m in menus" :key="m.id">
-
                 <a href="javascript:;">
-
                     <i class="icon-cogs"></i>
-
                     <span class="title">{{m.name}}</span>
-
                     <span class="arrow "></span>
-
                 </a>
-
                 <ul class="sub-menu">
                     <li v-for="m2 in m.children" :key="m2.id">
                                 <router-link :to="m2.url">
@@ -21,8 +15,6 @@
                                 </router-link>
                     </li>
                 </ul>
-
-
             </li>
         </ul>
     </div>
