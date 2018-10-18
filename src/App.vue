@@ -20,10 +20,6 @@
 </template>
 
 <script>
-
-import myApp from "metronic/js/app.js";
-import myIndex from "metronic/js/index.js";
-
 import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
 import Menu from '@/components/common/Menu'
@@ -32,9 +28,6 @@ export default {
   name: "App",
   components:{ Footer , Header,Menu }
 };
-
-myApp.init(); // initlayout and core plugins
-//myIndex.init();
 </script>
 
 <style>

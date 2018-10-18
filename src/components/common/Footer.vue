@@ -1,14 +1,15 @@
 <template>
     <div class="footer">
-		<div class="footer-inner">
-			2013 &copy; Metronic by keenthemes.Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
-		</div>
-		<div class="footer-tools">
-			<span class="go-top">
-			<i class="icon-angle-up"></i>
-			</span>
-		</div>
-	</div>
+      <slot></slot>
+      <div class="footer-inner">
+        2013 &copy; Metronic by keenthemes.Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+      </div>
+      <div class="footer-tools">
+        <span class="go-top">
+        <i class="icon-angle-up"></i>
+        </span>
+      </div>
+    </div>
 </template>
 <script>
 let timer = null
@@ -54,8 +55,12 @@ export default {
 }
 </script>
 <style scoped>
+h1{
+  font-size: 15px;
+  color: white;
+}
 .footer {
-  margin-left: 0 !important;
+  margin: 0 auto;
   /*background-color: aqua; */
 }
 

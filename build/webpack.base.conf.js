@@ -11,8 +11,6 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
@@ -30,8 +28,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'metronic': path.resolve(__dirname, '../src/components/metronic'),
-      'jquery': "jquery/src/jquery"
+      //'metronic': path.resolve(__dirname, '../src/components/metronic'),
+      //'jquery': 'jquery'
     }
   },
   module: {
@@ -83,11 +81,5 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  },
-  plugins:[
-    new webpack.ProvidePlugin({
-      $:"jquery",
-      jQuery:"jquery"
-    })
-  ]
+  }
 }
