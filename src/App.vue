@@ -6,7 +6,8 @@
     <div class="page-container">
 
       <!-- <Menu></Menu> -->
-      <menuEntry></menuEntry>
+      <!--<navtree menus= {{ menuData }}></navtree>-->
+      <menu-entry></menu-entry>
       <!-- BEGIN PAGE -->
 
       <div class="page-content">
@@ -28,7 +29,23 @@ import menuEntry from '@/components/common/menuEntry'
 
 export default {
   name: "App",
-  components:{ Footer , Header,Menu,menuEntry }
+  components:{ Footer , Header,Menu,menuEntry,NavTree },
+  data: function() {
+    return {
+      menuData: []
+    };
+  },
+  mounted:function(){
+    //编译完成后执行
+    this.getMenu();
+  },
+  methods: {
+    getMenu: function() {
+      this.$http.get("static/data/menu2.json", null).then(function(res) {
+        this.menuData = res.body;
+      });
+    }
+  }
 };
 </script>
 

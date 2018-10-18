@@ -1,29 +1,18 @@
 <template>
     <div class="page-sidebar nav-collapse collapse">
         <ul>
-            <li class="" v-for="m in menus">
-
+            <li class="" v-for="m in menus" :key="m.id + m.name">
                 <a href="javascript:;">
-
                     <i class="icon-cogs"></i>
-
                     <span class="title">{{m.name}}</span>
-
                     <span class="arrow "></span>
-
                 </a>
-
                 <ul class="sub-menu">
-                    <li v-for="m2 in m.children">
-
+                    <li v-for="m2 in m.children" :key="m2.id+m2.name">
                         <a href="layout_horizontal_sidebar_menu.html">
-
                             {{m2.name}}</a>
-
                     </li>
-
                 </ul>
-
             </li>
         </ul>
     </div>
