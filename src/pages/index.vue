@@ -7,6 +7,7 @@
          </Content>
        </Content>
     </Content>
+    <Content/>
 	</div>
 </template>
 <script>
