@@ -1,5 +1,6 @@
 var Index = function () {
 
+
     return {
 
         //main function to initiate the module
@@ -32,7 +33,7 @@ var Index = function () {
                     enableZoom: true,
                     hoverColor: '#c9dfaf',
                     hoverOpacity: null,
-                    values: sample_data,
+                    values: null,//sample_data,
                     normalizeFunction: 'linear',
                     scaleColors: ['#b6da93', '#909cae'],
                     selectedColor: '#c9dfaf',
@@ -893,10 +894,3 @@ var Index = function () {
     };
 
 }();
-
-const myIndex = {
-  init(){
-    Index.init()
-  }
-}
-export default myIndex;
