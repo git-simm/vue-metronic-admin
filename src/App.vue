@@ -29,7 +29,7 @@ import menuEntry from '@/components/common/menuEntry'
 
 export default {
   name: "App",
-  components:{ Footer , Header,Menu,menuEntry,NavTree },
+  components:{ Footer , Header,Menu,menuEntry },
   data: function() {
     return {
       menuData: []
