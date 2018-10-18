@@ -9,19 +9,19 @@
 			<div class="container-fluid">
 				<!-- BEGIN LOGO -->
 				<a class="brand" href="index.html">
-				<img src="../metronic/image/logo.png" alt="logo"/>
+				<img src="/static/image/logo.png" alt="logo"/>
 				</a>
 				<!-- END LOGO -->
 
 				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
 				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-				<img src="../metronic/image/menu-toggler.png" alt="" />
-				</a>          
-				<!-- END RESPONSIVE MENU TOGGLER -->            
+				<img src="/static/image/menu-toggler.png" alt="" />
+				</a>
+				<!-- END RESPONSIVE MENU TOGGLER -->
 
-				<!-- BEGIN TOP NAVIGATION MENU -->              
+				<!-- BEGIN TOP NAVIGATION MENU -->
 				<ul class="nav pull-right">
-					<!-- BEGIN NOTIFICATION DROPDOWN -->   
+					<!-- BEGIN NOTIFICATION DROPDOWN -->
 					<li class="dropdown" id="header_notification_bar">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-warning-sign"></i>
@@ -35,7 +35,7 @@
 							<li>
 								<a href="#">
 								<span class="label label-success"><i class="icon-plus"></i></span>
-								New user registered. 
+								New user registered.
 								<span class="time">Just now</span>
 								</a>
 							</li>
@@ -43,7 +43,7 @@
 							<li>
 								<a href="#">
 								<span class="label label-important"><i class="icon-bolt"></i></span>
-								Server #12 overloaded. 
+								Server #12 overloaded.
 								<span class="time">15 mins</span>
 								</a>
 							</li>
@@ -67,7 +67,7 @@
 							<li>
 								<a href="#">
 								<span class="label label-important"><i class="icon-bolt"></i></span>
-								Database overloaded 68%. 
+								Database overloaded 68%.
 								<span class="time">2 hrs</span>
 								</a>
 							</li>
@@ -99,7 +99,7 @@
 
 							<li>
 								<a href="inbox.html?a=view">
-								<span class="photo"><img src="../metronic/image/avatar2.jpg" alt="" /></span>
+								<span class="photo"><img src="/static/image/avatar2.jpg" alt="" /></span>
 								<span class="subject">
 								<span class="from">Lisa Wong</span>
 								<span class="time">Just Now</span>
@@ -107,13 +107,13 @@
 								<span class="message">
 								Vivamus sed auctor nibh congue nibh. auctor nibh
 								auctor nibh...
-								</span>  
+								</span>
 								</a>
 							</li>
 
 							<li>
 								<a href="inbox.html?a=view">
-								<span class="photo"><img src="../metronic/image/avatar3.jpg" alt="" /></span>
+								<span class="photo"><img src="/static/image/avatar3.jpg" alt="" /></span>
 								<span class="subject">
 								<span class="from">Richard Doe</span>
 								<span class="time">16 mins</span>
@@ -121,13 +121,13 @@
 								<span class="message">
 								Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh
 								auctor nibh...
-								</span>  
+								</span>
 								</a>
 							</li>
 
 							<li>
 								<a href="inbox.html?a=view">
-								<span class="photo"><img src="../metronic/image/avatar1.jpg" alt="" /></span>
+								<span class="photo"><img src="/static/image/avatar1.jpg" alt="" /></span>
 								<span class="subject">
 								<span class="from">Bob Nilson</span>
 								<span class="time">2 hrs</span>
@@ -135,7 +135,7 @@
 								<span class="message">
 								Vivamus sed nibh auctor nibh congue nibh. auctor nibh
 								auctor nibh...
-								</span>  
+								</span>
 								</a>
 							</li>
 
@@ -237,7 +237,7 @@
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown user">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<img alt="" src="../metronic/image/avatar1_small.jpg" />
+						<img alt="" src="/static/image/avatar1_small.jpg" />
 						<span class="username">Bob Nilson</span>
 						<i class="icon-angle-down"></i>
 						</a>
@@ -253,7 +253,7 @@
 					</li>
 					<!-- END USER LOGIN DROPDOWN -->
 				</ul>
-				<!-- END TOP NAVIGATION MENU --> 
+				<!-- END TOP NAVIGATION MENU -->
 			</div>
 		</div>
 		<!-- END TOP NAVIGATION BAR -->
