@@ -5,7 +5,8 @@
 
     <div class="page-container">
 
-      <Menu></Menu>
+      <!-- <Menu></Menu> -->
+      <menuEntry></menuEntry>
       <!-- BEGIN PAGE -->
 
       <div class="page-content">
@@ -23,10 +24,11 @@
 import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
 import Menu from '@/components/common/Menu'
+import menuEntry from '@/components/common/menuEntry'
 
 export default {
   name: "App",
-  components:{ Footer , Header,Menu }
+  components:{ Footer , Header,Menu,menuEntry }
 };
 </script>
 
