@@ -3,11 +3,11 @@
     <Menu></Menu>
     <input type="text" v-model="myMsg">
 		<div>{{ myMsg }}</div>
-    <p v-for="m in menus">{{m.name}}</p>
-		<p v-for="m in menus">{{m.name}}</p>
-		<p v-for="m in menus">{{m.name}}</p>
-		<p v-for="m in menus">{{m.name}}</p>
-		<p v-for="m in menus">{{m.name}}</p>
+    <p v-for="m in menus" :key="m.id">{{m.name}}</p>
+		<p v-for="m in menus" :key="m.id">{{m.name}}</p>
+		<p v-for="m in menus" :key="m.id">{{m.name}}</p>
+		<p v-for="m in menus" :key="m.id">{{m.name}}</p>
+		<p v-for="m in menus" :key="m.id">{{m.name}}</p>
 	</div>
 </template>
 <script>
