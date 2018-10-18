@@ -905,11 +905,6 @@ export default {
 }
 </script>
 <style scoped>
-    @import '../../../static/css/style.css';
-    @import '../../../static/css/bootstrap.min.css';
-    @import '../../../static/css/bootstrap-responsive.min.css';
-    @import '../../../static/css/font-awesome.css';
-    @import '../../../static/css/halflings.css';
-    @import '../../../static/css/style-responsive.css';
+
 </style>
 
