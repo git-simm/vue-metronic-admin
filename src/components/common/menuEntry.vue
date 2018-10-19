@@ -1,28 +1,16 @@
 
 <template>
     <div class="page-sidebar nav-collapse collapse">
-        <ul class="page-sidebar-menu">
-            <li class="" v-for="m in menus" :key="m.id">
-                <a href="javascript:;">
-                    <i class="icon-cogs"></i>
-                    <span class="title">{{m.name}}</span>
-                    <span class="arrow "></span>
-                </a>
-                <ul class="sub-menu">
-                    <li v-for="m2 in m.children" :key="m2.id">
-                                <router-link :to="m2.url">
-                                {{m2.name}}
-                                </router-link>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <subMenu :menus="menus"></subMenu>
     </div>
 </template>
 
 <script>
 export default {
   name: "menuEntry",
+  components:{
+    "subMenu":()=>import("@/components/common/subMenu")
+  },
   data: function() {
     return {
       menus: []

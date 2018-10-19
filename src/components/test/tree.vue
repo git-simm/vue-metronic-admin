@@ -2,7 +2,7 @@
   <div class="content">
     <p>层级：{{ node.name }}</p>
     <p v-show="node.childs!=null && node.childs.length>0">拥有子级节点:[{{ node.childs!=null ? node.childs.length:0 }}]个</p>
-    <tree v-for="node in node.childs" :node=node></tree>
+    <tree v-for="node in node.childs" :node=node :key='node.name'></tree>
   </div>
 </template>
 <script>
