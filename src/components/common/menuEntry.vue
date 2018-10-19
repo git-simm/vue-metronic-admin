@@ -28,6 +28,8 @@ export default {
       menus: []
     };
   },
+  created:function(){},
+  //编译时执行
   mounted: function() {
     //编译完成后执行
     this.getMenu();

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import vueResource from 'vue-resource'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import test from './test'
 
 Vue.use(Router)
 Vue.use(vueResource);
@@ -27,7 +28,7 @@ export default new Router({
       path: '/demo2',
       name: 'demo2',
       component: () => import('@/pages/demo2.vue')
-    }
-    
+    },
+    ...test
   ]
 })

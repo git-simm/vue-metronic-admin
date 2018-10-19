@@ -43,7 +43,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    // 打包后的路径不要 '/'
+    // 打包后的路径不要 '/'，可以保证不用web服务器发布程序，即可运行
     assetsPublicPath: '',
 
     /**

@@ -7,15 +7,18 @@
          </Content>
        </Content>
     </Content>
-    <Content/>
+    <Content>
+      <demo1></demo1>
+    </Content>
 	</div>
 </template>
 <script>
 import Content from '@/components/common/Content'
+import demo1 from '@/pages/demo1.vue'
 export default {
   name: 'tq-footer',
   props:['msg'],
-  components:{Content},
+  components:{Content,demo1},
 	//数据
 	data: function() {
 		return {
