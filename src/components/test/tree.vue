@@ -1,6 +1,7 @@
 <template>
   <div class="content">
     <p>层级：{{ node.name }}</p>
+    <p v-show="node.childs!=null && node.childs.length>0">拥有子级节点:[{{ node.childs!=null ? node.childs.length:0 }}]个</p>
     <tree v-for="node in node.childs" :node=node></tree>
   </div>
 </template>
@@ -8,6 +9,9 @@
 let timer = null
 export default {
   name: 'tree',
+  mounted : function(){
+     //this.hasChild = this.node.length;
+  },
   props:{
     node:{
       type:Object,
