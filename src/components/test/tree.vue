@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <p>层级：{{ node.name }}</p>
-    <tree v-for="node in node.childs" :node=node></tree>
+    <tree v-for="node in node.childs" :node=node :key='node.name'></tree>
   </div>
 </template>
 <script>
