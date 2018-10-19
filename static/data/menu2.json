@@ -15,7 +15,21 @@
         "id": 5,
         "name": "demo1",
         "icon":"",
-        "url":"/demo1"
+        "url":"/demo1",
+        "children": [
+          {
+            "id": 51,
+            "name": "demo51",
+            "icon":"",
+            "url":"/demo1"
+          },
+          {
+            "id": 52,
+            "name": "demo52",
+            "icon":"",
+            "url":"/demo2"
+          }
+        ]
       },
       {
         "id": 6,

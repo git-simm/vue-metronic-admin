@@ -1,22 +1,17 @@
 <template>
   <div>
     <ul class="page-sidebar-menu">
-            <li class="" v-for="m in menus" :key="m.id">
-                <a href="javascript:;">
-                    <i class="icon-cogs"></i>
-                    <span class="title">{{m.name}}</span>
-                    <span class="arrow "></span>
-                </a>
-                <finalMenu :menus="m.children"></finalMenu>
-                <!-- <ul class="sub-menu">
-                    <li v-for="m2 in m.children" :key="m2.id">
-                                <router-link :to="m2.url">
-                                {{m2.name}}
-                                </router-link>
-                    </li>
-                </ul> -->
-            </li>
-        </ul>
+        <li class="" v-for="m in menus" :key="m.id">
+            <a href="javascript:;">
+                <i class="icon-cogs"></i>
+                <span class="title">{{m.name}}</span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub-menu">
+              <finalMenu v-for="m2 in m.children" :key="m2.id" :menu=m2></finalMenu>
+            </ul>
+        </li>
+    </ul>
   </div>
 </template>
 <script>
@@ -28,9 +23,9 @@ export default {
   },
   props:{
     menus:{
-      type:Object,
+      type:Array,
       default:function(){
-        return {};
+        return [];
       }
     }
   }
