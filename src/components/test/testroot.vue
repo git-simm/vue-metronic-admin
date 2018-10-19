@@ -15,12 +15,6 @@ export default {
   name: 'testRoot',
   components:{
     "tree":()=>import("@/components/test/tree")
-  },
-  props: {
-    comment:{
-      type:String,
-      default:'无评论'
-    }
   }
 }
 </script>
